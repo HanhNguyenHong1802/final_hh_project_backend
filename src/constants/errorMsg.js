@@ -1,4 +1,4 @@
-export const ERR_MSG = {
+const ERR_MSG = {
   INVALID_USER: 'Sorry you have entered a Invalid Username and/or Password.',
   UNAUTHORIZED: 'Unauthorized',
   SOMETHING_WENT_WRONG: 'Something went wrong please try again after sometime.',
@@ -7,5 +7,6 @@ export const ERR_MSG = {
   TOKEN_EXPIRED: 'Token expired',
   INVALID_ENDPOINT: 'Invalid api not found',
   UNDER_MAINTENANCE: 'Application under maintenance',
-  NO_SPECIAL_CHARACTER: 'Special characters are not allowed.'
-}
+  NO_SPECIAL_CHARACTER: 'Special characters are not allowed.',
+};
+module.exports = ERR_MSG;

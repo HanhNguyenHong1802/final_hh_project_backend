@@ -1,5 +1,6 @@
-export const RES_MSG = {
+const RES_MSG = {
   OK: 'OK',
   LOGOUT: 'User logout successful',
-  PASS: 'PASS'
-}
+  PASS: 'PASS',
+};
+module.exports = RES_MSG;

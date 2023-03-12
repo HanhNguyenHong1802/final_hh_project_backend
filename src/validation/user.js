@@ -1,11 +1,11 @@
-import Joi from '@hapi/joi'
+import Joi from '@hapi/joi';
 
-const gender = ['male', 'female', 'transgender']
+const gender = ['male', 'female', 'transgender'];
 
 const UserSchema = Joi.object().keys({
   fullName: {
     firstName: Joi.string().trim().required(),
-    lastName: Joi.string().trim().required()
+    lastName: Joi.string().trim().required(),
   },
   gender: Joi.string()
     .trim()
@@ -15,7 +15,7 @@ const UserSchema = Joi.object().keys({
   mobileNo: Joi.string().pattern(new RegExp('^[0-9]{10}$')).required(),
   password: Joi.string().trim().required(),
   mail: Joi.mail(),
-  googleId: Joi.string().trim()
-})
+  googleId: Joi.string().trim(),
+});
 
-export { UserSchema }
+export { UserSchema };

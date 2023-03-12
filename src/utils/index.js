@@ -1,5 +1,7 @@
-export * from './appError'
-export * from './encryption'
-export * from './logger'
-export * from './responseHandler'
-export * from './security'
+module.exports = {
+  ...require('./appError'),
+  ...require('./encryption'),
+  ...require('./logger'),
+  ...require('./responseHandler'),
+  ...require('./security'),
+};

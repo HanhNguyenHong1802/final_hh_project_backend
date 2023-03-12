@@ -1,0 +1,19 @@
+
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@apiDocs": ["src/api-docs"],
+      "@config": ["src/config"],
+      "@constants": ["src/constants"],
+      "@controllers": ["src/controllers"],
+      "@helpers": ["src/helpers"],
+      "@middlewares": ["src/middlewares"],
+      "@models": ["src/models"],
+      "@routes": ["src/routes"],
+      "@services": ["src/services"],
+      "@utils": ["utils"],
+      "@validation":["src/validation"]
+    }
+  }
+}

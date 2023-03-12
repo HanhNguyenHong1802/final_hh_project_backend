@@ -1,10 +1,6 @@
-node_modules/
-.DS_Store
-.vscode/
 dist
-public
-dump.rdb
-.husky/_
-*.sh
-.husky/.gitignore
+node_modules
+build
+.env.local
+package-lock.json
 .env

@@ -1,22 +1,47 @@
 module.exports = {
-  extends: 'standard',
   env: {
-    node: true,
-    mocha: true,
-    es6: true
+    browser: true,
+    es2021: true,
   },
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  plugins: ['prettier'],
+  extends: ['airbnb-base', 'plugin:prettier/recommended'],
   rules: {
-    quotes: ['error', 'single'],
-    semi: ['error', 'never'],
-    'no-useless-escape': 'off',
-    eqeqeq: ['error', 'smart'],
-    'no-console': 'error',
-    camelcase: ['error'],
-    'no-extra-bind': ['error'],
-    'no-multi-spaces': ['error'],
-    'arrow-spacing': ['error', { before: true, after: true }],
-    'arrow-parens': ['error', 'as-needed'],
-    'no-var': 'error',
-    'comma-spacing': ['error', { before: false, after: true }]
-  }
-}
+    'no-console': 'off',
+    'no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+      },
+    ],
+    'import/extensions': 'off',
+    'import/prefer-default-export': 'off',
+    'global-require': 0,
+    'linebreak-style': 0,
+  },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@apiDocs', 'src/api-docs'],
+          ['@config', 'src/config'],
+          '@constants',
+          'src/constants',
+          '@controllers',
+          'src/controllers',
+          ['@helpers', 'src/helpers'],
+          ['@middlewares', 'src/middlewares'],
+          ['@models', 'src/models'],
+          ['@routes', 'src/routes'],
+          ['@services', 'src/services'],
+          ['@utils', 'src/utils'],
+          ['@validation', 'src/validation'],
+        ],
+        extensions: ['.js', '.jsx'],
+      },
+    },
+  },
+};

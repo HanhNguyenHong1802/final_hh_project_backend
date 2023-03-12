@@ -1,7 +1,7 @@
 const debug = require('debug')
-
 const log = debug('app:index')
-
+require('dotenv').config();
+require('module-alias/register')
 const applicationEnvVars = [
   'NODE_ENV',
   'PORT'
